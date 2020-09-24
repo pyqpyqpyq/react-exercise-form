@@ -1,0 +1,107 @@
+@font-color: #555;
+@blue: #00a4e6;
+@white: #fff;
+
+.my-profile {
+  box-sizing: border-box;
+
+  padding: 30px 50px;
+
+  h1,
+  label,
+  input,
+  button {
+    font-family: Arial, Helvetica, sans-serif;
+    color: @font-color;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  label,
+  textarea {
+    display: block;
+  }
+
+  label[for="conductRead"] {
+    display: inline-block;
+
+    height: 30px;
+
+    margin: 0;
+    transform: translateY(-11px);
+
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 30px;
+  }
+
+  #conductRead {
+    display: inline-block;
+
+    margin-top: 20px;
+    margin-left: 0;
+
+    width: 40px;
+    height: 40px;
+  }
+
+  label {
+    margin: 10px 0;
+
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  input,
+  select,
+  textarea {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: 0;
+    font-size: 15px;
+  }
+
+  textarea {
+    height: 150px;
+
+    resize: none;
+  }
+
+  input:not(#conductRead),
+  select {
+    height: 50px;
+  }
+
+  button {
+    display: block;
+
+    width: 200px;
+    height: 50px;
+
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 0;
+    background-color: @blue;
+    cursor: pointer;
+
+    font-size: 16px;
+    color: @white;
+
+    &:disabled {
+      background-color: lighten(@blue, 25%);
+      cursor: default;
+    }
+
+    &:not(:disabled):active {
+      background-color: darken(@blue, 25%);
+    }
+  }
+}
